@@ -8,6 +8,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
+    new UglifyJsPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Sudoku',
       template: './src/index.html',
